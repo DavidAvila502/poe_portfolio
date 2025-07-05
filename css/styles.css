@@ -134,8 +134,9 @@ header > nav {
    width: 100%;
    display: flex;
    flex-direction: row;
-   align-items: end;
+   align-items: center;
    justify-content: end;
+   gap: 20px;
 }
 
 header nav > ul {
@@ -176,4 +177,32 @@ header > nav > ul > li:hover > a {
 header > nav > ul > li:hover > a > span,
 header nav ul li > a:hover > span {
    width: 100%;
+}
+
+/* effects toggle */
+#effects-toggle {
+   width: 80px;
+   height: 30px;
+   border: 1px solid #878787;
+   border-radius: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   padding: 5px;
+   cursor: pointer;
+}
+
+#effects-toggle > span {
+   border-radius: 100%;
+   width: 20px;
+   height: 20px;
+   border: 2px solid #878787;
+   background-color: #878787;
+   transition: transform 400ms ease;
+   transform: translateX(50px);
+}
+
+#effects-toggle.active > span {
+   background-color: #b8860b;
+   transform: translateX(0px);
 }
