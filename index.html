@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>David-Avila</title>
+      <link rel="stylesheet" href="./css/sanitize.css" />
+      <link rel="stylesheet" href="./css/styles.css" />
+   </head>
+   <body>
+      <audio
+         id="rain-sound"
+         preload="auto"
+         src="./assets/audio/rain_sound.mp3"
+      ></audio>
+      <audio
+         id="thunder-sound"
+         src="./assets/audio/thunder_sound.mp3"
+         preload="auto"
+      ></audio>
+      <div class="overlay overlay-1"></div>
+      <div class="overlay overlay-2"></div>
+      <div id="cursor-light"></div>
+      <div id="permissions-effects-modal" class="overlay">
+         <p class="permissions-effects-modal-text">
+            Este es un sitio tematico, por lo cual te recomiendo activar todos
+            los efectos, ¿te atreves ?
+         </p>
+
+         <div class="permissions-effects-modal-btn-container">
+            <button id="btn-allow" class="permissions-effects-modal-btn">
+               Activar efectos
+            </button>
+            <button id="btn-deny" class="permissions-effects-modal-btn">
+               No, estoy asustado
+            </button>
+         </div>
+      </div>
+
+      <header>
+         <nav>
+            <ul>
+               <li>
+                  <a href="#">Home <span></span></a>
+               </li>
+
+               <li>
+                  <a href="#">Sobre mí <span></span></a>
+               </li>
+
+               <li>
+                  <a href="#">Habilidades <span></span></a>
+               </li>
+
+               <li>
+                  <a href="#">Proyectos <span></span></a>
+               </li>
+
+               <li>
+                  <a href="#">Contacto <span></span></a>
+               </li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <section></section>
+      </main>
+      <script src="./js/handle_permissions_effects.js"></script>
+      <script src="./js/modal_permissions.js"></script>
+      <script src="./js/cursor_light.js"></script>
+      <script src="./js/thunder_sound.js"></script>
+      <script src="./js/rain_sound.js"></script>
+   </body>
+</html>
