@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+function loadRainSound() {
    const rain_sound = document.getElementById("rain-sound");
 
    function playAudio() {
@@ -10,4 +10,4 @@ document.addEventListener("DOMContentLoaded", () => {
    }
 
    playAudio();
-});
+}

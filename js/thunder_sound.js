@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+function loadThunderSound() {
    const body = document.body;
    const thunder_sound = document.getElementById("thunder-sound");
 
@@ -36,4 +36,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
    // play audio loop
    setInterval(playAudio, 15000);
-});
+}
