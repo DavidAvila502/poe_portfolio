@@ -18,24 +18,6 @@
          src="./assets/audio/thunder_sound.mp3"
          preload="auto"
       ></audio>
-      <div class="overlay overlay-1"></div>
-      <div class="overlay overlay-2"></div>
-      <div id="cursor-light"></div>
-      <div id="permissions-effects-modal" class="overlay">
-         <p class="permissions-effects-modal-text">
-            Este es un sitio tematico, por lo cual te recomiendo activar todos
-            los efectos, ¿te atreves ?
-         </p>
-
-         <div class="permissions-effects-modal-btn-container">
-            <button id="btn-allow" class="permissions-effects-modal-btn">
-               Activar efectos
-            </button>
-            <button id="btn-deny" class="permissions-effects-modal-btn">
-               No, estoy asustado
-            </button>
-         </div>
-      </div>
 
       <header>
          <nav>
@@ -64,8 +46,91 @@
          </nav>
       </header>
       <main>
-         <section></section>
+         <section id="banner">
+            <div class="banner-grid">
+               <div class="banner-content-container">
+                  <div class="banner-content-quote-container">
+                     <p class="poe-quote">
+                        <span>"</span>La ciencia no nos ha enseñado aún si la
+                        locura es o no lo más sublime de la inteligencia<span
+                           >"</span
+                        >
+                     </p>
+                     <div class="banner-content-quote-author-container">
+                        <p><span>—</span> Edgar Allan Poe</p>
+                     </div>
+                  </div>
+
+                  <div class="banner-content-developer-info-container">
+                     <p class="developer-name">David <span>Ávila</span></p>
+                     <p class="developer-info">
+                        Ingeniero en sistemas computacionales.
+                     </p>
+                     <p class="developer-info">
+                        Desarrollador Full-Stack especializado en (REACT +
+                        SPRING BOOT)
+                     </p>
+                  </div>
+
+                  <div class="banner-content-social-container">
+                     <div class="triangle-outer">
+                        <div class="triangle-inner">
+                           <a
+                              href="https://github.com/DavidAvila502"
+                              target="_blank"
+                           >
+                              <img
+                                 src="./assets/image/github_icon.svg"
+                                 alt="github.svg"
+                              />
+                           </a>
+                        </div>
+                     </div>
+
+                     <div class="triangle-outer triangle-white">
+                        <div class="triangle-inner">
+                           <a
+                              href="https://www.linkedin.com/in/jos%C3%A9-david-%C3%A1vila-maldonado-8325422a7/"
+                              target="_blank"
+                           >
+                              <img
+                                 src="./assets/image/linkedin_icon.svg"
+                                 alt="linkedin.svg"
+                              />
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="banner-image-container">
+                  <img
+                     class="crow-image"
+                     src="./assets/image/crow.png"
+                     alt="crow.png"
+                  />
+               </div>
+            </div>
+         </section>
       </main>
+      <div class="overlay overlay-1"></div>
+      <div class="overlay overlay-2"></div>
+      <div id="cursor-light"></div>
+      <div id="permissions-effects-modal" class="overlay">
+         <p class="permissions-effects-modal-text">
+            Este es un sitio temático, por lo cual te recomiendo activar todos
+            los efectos, ¿te atreves?
+         </p>
+
+         <div class="permissions-effects-modal-btn-container">
+            <button id="btn-allow" class="permissions-effects-modal-btn">
+               Activar efectos
+            </button>
+            <button id="btn-deny" class="permissions-effects-modal-btn">
+               No, estoy asustado
+            </button>
+         </div>
+      </div>
+
       <script src="./js/handle_permissions_effects.js"></script>
       <script src="./js/modal_permissions.js"></script>
       <script src="./js/cursor_light.js"></script>

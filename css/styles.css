@@ -46,7 +46,7 @@ main {
    background-size: cover;
    background-position: center;
    position: relative;
-   z-index: -1;
+   z-index: auto;
    color: white;
    padding: 2rem;
    max-width: 1536px;
@@ -211,4 +211,145 @@ header nav ul li > a:hover > span {
 #effects-toggle.active > span {
    background-color: #b8860b;
    transform: translateX(0px);
+}
+
+/* Banner section */
+
+#banner {
+   min-height: 900px;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.banner-grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   max-width: 1280px;
+   width: 100%;
+   height: 700px;
+}
+.banner-content-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   /* background: blueviolet; */
+   gap: 50px;
+}
+.banner-content-quote-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.poe-quote {
+   font-size: 30px;
+   font-style: italic;
+   font-family: "Libre Baskerville", serif;
+   color: white;
+   z-index: 2;
+   position: relative;
+   margin: 0;
+}
+
+.poe-quote > span {
+   color: #b8860b;
+}
+
+.banner-content-quote-author-container {
+   width: 100%;
+   z-index: 2;
+}
+.banner-content-quote-author-container > p {
+   text-align: end;
+   font-size: 30px;
+   font-family: "Libre Baskerville", serif;
+   margin: 0;
+}
+
+.banner-content-quote-author-container > p > span {
+   color: #b8860b;
+}
+
+/* banner developer info */
+.banner-content-developer-info-container {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+}
+
+.developer-name {
+   color: white;
+   font-family: "Libre Baskerville", serif;
+   font-size: 45px;
+   text-align: start;
+   z-index: 3;
+   margin: 0;
+}
+
+.developer-info {
+   color: #878787;
+   font-family: "Libre Baskerville", serif;
+   font-size: 20px;
+   text-align: start;
+   z-index: 3;
+   margin: 0;
+}
+
+.developer-name > span {
+   color: #b8860b;
+}
+
+.banner-content-social-container {
+   display: flex;
+   width: 100%;
+   flex-direction: row;
+   gap: 20px;
+}
+
+/* triangle */
+.triangle-outer {
+   width: 0;
+   height: 0;
+   border-left: 51px solid transparent;
+   border-right: 51px solid transparent;
+   border-top: 81px solid #b8860b;
+   position: relative;
+   z-index: 3;
+}
+
+.triangle-white {
+   border-top: 81px solid white;
+}
+
+.triangle-inner {
+   position: relative;
+   top: -79px;
+   left: -47px;
+   width: 0;
+   height: 0;
+   border-left: 47px solid transparent;
+   border-right: 47px solid transparent;
+   border-top: 75px solid black;
+   display: flex;
+}
+.triangle-inner > a {
+   position: absolute;
+   top: -65px;
+   left: -18px;
+}
+
+.triangle-inner > a > img {
+   height: 35px;
+}
+
+/* Banner image */
+.banner-image-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.crow-image {
+   height: 680px;
 }
