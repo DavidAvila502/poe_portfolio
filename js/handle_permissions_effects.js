@@ -1,15 +1,27 @@
 const LS_KEY = "areEffectsAllowed";
+let is_first_interaction_done = false;
 
 function setEffectsAllowed(flag) {
    localStorage.setItem(LS_KEY, flag ? "1" : "0");
    document.getElementById("permissions-effects-modal").style.display = "none";
 
+   setFirstInteraction(true);
+
    initEffects();
+}
+
+function setFirstInteraction(value) {
+   if (is_first_interaction_done == false && value == true) {
+      loadRainSound();
+      loadThunderSound();
+   }
+
+   is_first_interaction_done = value;
 }
 
 function initEffects() {
    const flag = isEffectsAllowed();
-   if (flag) {
+   if (flag && is_first_interaction_done) {
       activateEffects();
    } else {
       deactivateEffects();
