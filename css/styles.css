@@ -81,6 +81,14 @@ main {
 }
 
 /* permissions effects modal */
+.permissions-effects-overlay {
+   position: fixed;
+   inset: 0;
+   z-index: 9;
+   pointer-events: auto;
+   background: rgba(0, 0, 0, 0.6);
+}
+
 #permissions-effects-modal {
    pointer-events: all;
    background: black;
@@ -90,6 +98,7 @@ main {
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   height: 100dvh;
 }
 .permissions-effects-modal-text {
    color: white;
