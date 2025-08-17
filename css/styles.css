@@ -412,6 +412,21 @@ header nav ul li > a:hover > span {
    color: #b8860b;
 }
 
+/* Text appears animation */
+.char {
+   display: inline-block;
+   opacity: 0;
+   transform: translateY(8px);
+   transition: opacity 300ms ease, transform 300ms ease;
+   transition-delay: var(--delay, 0s);
+   white-space: pre;
+}
+
+.reveal.in-view .char {
+   opacity: 1;
+   transform: translateY(0);
+}
+
 /* Media queries */
 
 @media (width < 1024px) {
