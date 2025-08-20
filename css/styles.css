@@ -453,14 +453,16 @@ header nav ul li > a:hover > span {
 .skills-cards-container {
    width: 100%;
    display: flex;
+   flex-wrap: wrap;
    flex-direction: row;
    gap: 30px;
    /* background-color: aqua; */
-   height: 400px;
+   /* height: 400px; */
+   justify-content: center;
 }
 
 .skill-card {
-   width: 300px;
+   width: 200px;
    height: 400px;
    /* background-color: greenyellow; */
    display: flex;
