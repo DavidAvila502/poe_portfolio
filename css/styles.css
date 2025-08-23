@@ -381,14 +381,14 @@ header nav ul li > a:hover > span {
 }
 .scroll-work-image {
    height: 200px;
-   z-index: 2;
+   z-index: 1;
 }
 
 .section-title {
    text-align: center;
    font-style: italic;
    font-family: "Libre Baskerville", serif;
-   z-index: 2;
+   z-index: 1;
    font-size: 30px;
 }
 
@@ -633,6 +633,74 @@ header nav ul li > a:hover > span {
 
 .card-project-icon {
    width: 80px;
+}
+
+/* project modal section */
+
+.project-modal-overlay {
+   position: fixed;
+   inset: 0;
+   z-index: auto;
+   pointer-events: none;
+   opacity: 0;
+   transition: all 2000ms;
+}
+
+#project-modal {
+   background-color: black;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 1;
+}
+
+.project-modal-content-container {
+   max-width: 1536px;
+   width: 100%;
+   height: 90%;
+   padding: 1em;
+   /* background-color: bisque; */
+
+   /* background-image: url("../assets/image/pachment2.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center; */
+}
+
+.project-modal-content-close {
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+   align-items: end;
+   justify-content: end;
+}
+
+.project-modal-close-btn {
+   border-radius: 100%;
+   color: white;
+   background-color: #b8860b;
+   font-size: 20px;
+   cursor: pointer;
+   border: none;
+   width: 30px;
+   height: 30px;
+}
+
+.project-modal-content {
+   width: 100%;
+   min-height: 90%;
+   overflow-x: hidden;
+   overflow-y: auto;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   /* background-color: aqua; */
+}
+
+.project-modal-content-title {
+   font-family: "Libre Baskerville", serif;
+   font-size: 25px;
+   color: #b8860b;
 }
 
 /* Media queries */
