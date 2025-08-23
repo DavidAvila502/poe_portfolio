@@ -703,6 +703,19 @@ header nav ul li > a:hover > span {
    color: #b8860b;
 }
 
+.project-modal-content-story {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.project-modal-story-text {
+   color: white;
+   font-family: "Libre Baskerville", serif;
+   font-size: 25px;
+}
+
 /* Media queries */
 
 @media (width < 1024px) {
