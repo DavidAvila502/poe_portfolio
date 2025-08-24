@@ -684,6 +684,7 @@ header nav ul li > a:hover > span {
    border: none;
    width: 30px;
    height: 30px;
+   margin-bottom: 20px;
 }
 
 .project-modal-content {
@@ -699,7 +700,7 @@ header nav ul li > a:hover > span {
 
 .project-modal-content-title {
    font-family: "Libre Baskerville", serif;
-   font-size: 25px;
+   font-size: 30px;
    color: #b8860b;
 }
 
@@ -710,10 +711,48 @@ header nav ul li > a:hover > span {
    flex-direction: column;
 }
 
+.project-modal-content-tech-container {
+   display: flex;
+   flex-direction: row;
+   align-items: start;
+   justify-content: start;
+   width: 100%;
+   gap: 20px;
+}
+
+.project-modal-content-tech-icon {
+   height: 60px;
+}
+
+.project-modal-content-title-section {
+   color: #b8860b;
+   font-family: "Libre Baskerville", serif;
+   font-size: 30px;
+   text-align: start;
+   width: 100%;
+}
+
 .project-modal-story-text {
    color: white;
    font-family: "Libre Baskerville", serif;
    font-size: 25px;
+}
+
+.project-modal-content-screenShots {
+   display: flex;
+   align-items: start;
+   justify-content: start;
+   flex-direction: row;
+   gap: 40px;
+   width: 100%;
+   min-height: 700px;
+   /* background-color: aqua; */
+   overflow-x: auto;
+   overflow-y: hidden;
+}
+
+.project-modal-content-screenShots > img {
+   height: 700px;
 }
 
 /* Media queries */
