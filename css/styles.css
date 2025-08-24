@@ -688,7 +688,7 @@ header nav ul li > a:hover > span {
 
 .project-modal-content {
    width: 100%;
-   min-height: 90%;
+   height: 90%;
    overflow-x: hidden;
    overflow-y: auto;
    display: flex;
