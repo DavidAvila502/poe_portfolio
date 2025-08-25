@@ -468,7 +468,7 @@ header nav ul li > a:hover > span {
    display: flex;
    flex-direction: column;
    align-items: center;
-   z-index: 2;
+   z-index: 1;
 }
 
 .skill-card-gargoyle {
@@ -755,6 +755,38 @@ header nav ul li > a:hover > span {
    height: 700px;
 }
 
+.project-modal-content-links-container {
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   justify-content: start;
+   width: 100%;
+}
+
+.project-modal-content-link-item {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: start;
+   gap: 10px;
+   width: 100%;
+}
+.project-modal-content-link-item > p {
+   color: #b8860b;
+   font-family: "Libre Baskerville", serif;
+   font-size: 25px;
+   white-space: nowrap;
+   overflow: visible;
+}
+.project-modal-content-link-item > a {
+   text-decoration: none;
+   color: white;
+   font-size: 25px;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
 /* Media queries */
 
 @media (width < 1024px) {
@@ -807,8 +839,18 @@ header nav ul li > a:hover > span {
       font-size: 15px;
    }
 
+   /* Banner */
+   .poe-quote {
+      font-size: 22px;
+   }
+   /* project card */
    .project-cards-container {
       align-items: center;
       justify-content: center;
+   }
+
+   /* project card modal */
+   .project-modal-story-text {
+      font-size: 18px;
    }
 }
