@@ -37,6 +37,10 @@ const setProjectsInfo = (projectName) => {
    const projectScreenShots = document.querySelector(
       ".project-modal-content-screenShots"
    );
+
+   const projectLinksContainer = document.querySelector(
+      ".project-modal-content-links-container"
+   );
    projectName = projectName.toLowerCase();
 
    const currentProjectInfo = projectConstants[projectName];
@@ -76,6 +80,34 @@ const setProjectsInfo = (projectName) => {
 
       projectScreenShots.append(img);
    });
+
+   if (currentProjectInfo.github) {
+      addLink("Github:", currentProjectInfo.github, projectLinksContainer);
+   }
+
+   if (currentProjectInfo.site) {
+      addLink("Sitio:", currentProjectInfo.site, projectLinksContainer);
+   }
+};
+
+const addLink = (tag, url, container) => {
+   const linkItem = document.createElement("div");
+   linkItem.classList.add("project-modal-content-link-item");
+
+   const github = document.createElement("p");
+   github.textContent = tag;
+
+   const link = document.createElement("a");
+   link.target = "_blank";
+   link.href = url;
+   link.textContent = url;
+   link.classList.add("reveal");
+   splitTextByChar(link);
+   io.observe(link);
+
+   linkItem.append(github);
+   linkItem.append(link);
+   container.append(linkItem);
 };
 
 const cleanProjectInfo = () => {
@@ -91,10 +123,15 @@ const cleanProjectInfo = () => {
       ".project-modal-content-screenShots"
    );
 
+   const projectLinksContainer = document.querySelector(
+      ".project-modal-content-links-container"
+   );
+
    projectTitle.textContent = "Unknown";
    projectStoryContainer.innerHTML = "";
    projectTechContainer.innerHTML = "";
    projectScreenShots.innerHTML = "";
+   projectLinksContainer.innerHTML = "";
 };
 
 const projectConstants = {
@@ -118,5 +155,8 @@ const projectConstants = {
          "./assets/image/villamar_rewards_4.jpeg",
          "./assets/image/villamar_rewards_5.jpeg",
       ],
+
+      github: null,
+      site: "https://sistemafidelizacion-production.up.railway.app/",
    },
 };
