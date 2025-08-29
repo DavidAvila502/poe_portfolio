@@ -81,8 +81,10 @@ const setProjectsInfo = (projectName) => {
       projectScreenShots.append(img);
    });
 
-   if (currentProjectInfo.github) {
-      addLink("Github:", currentProjectInfo.github, projectLinksContainer);
+   if (currentProjectInfo.github.length > 0) {
+      currentProjectInfo.github.forEach((githubLink) => {
+         addLink("Github:", githubLink, projectLinksContainer);
+      });
    }
 
    if (currentProjectInfo.site) {
@@ -156,7 +158,36 @@ const projectConstants = {
          "./assets/image/villamar_rewards_5.jpeg",
       ],
 
-      github: null,
+      github: [],
       site: "https://sistemafidelizacion-production.up.railway.app/",
+   },
+
+   tropix: {
+      title: "Tropix",
+      story: [
+         "En *Acapulco* se fue gestando un mal silencioso: la industria hotelera incrementaba las tarifas de las sesiones fotográficas para turistas mientras, en las sombras, los fotógrafos recibían compensaciones cada vez más insignificantes por su trabajo. Lo que empezó como una práctica comercial se convirtió en una pesadilla cotidiana —clientes insatisfechos, talento explotado y una experiencia turística empobrecida.",
+         "De esa impotencia nació *Tropix*: una plataforma de sesiones fotográficas concebida para restituir la justicia en el ecosistema. tropix conecta turistas y fotógrafos mediante un sistema transparente de precios que respeta el valor del servicio y asegura una remuneración digna para los profesionales. Así, la cámara deja de ser cómplice de la injusticia y recupera su función: capturar memorias sin explotar a quienes las producen.",
+      ],
+
+      technologies: [
+         { name: "React js", image: "./assets/image/react_icon.svg" },
+         { name: "Postgresql", image: "./assets/image/postgre_sql_icon.svg" },
+         { name: "Spring Boot", image: "./assets/image/spring_boot_icon.svg" },
+      ],
+
+      screenshots: [
+         "./assets/image/tropix_1.png",
+         "./assets/image/tropix_2.png",
+         "./assets/image/tropix_3.png",
+         "./assets/image/tropix_4.png",
+         "./assets/image/tropix_5.png",
+         "./assets/image/tropix_6.png",
+      ],
+
+      github: [
+         "https://github.com/DavidAvila502/PhosellApi",
+         "https://github.com/DavidAvila502/PhosellUi",
+      ],
+      site: null,
    },
 };
