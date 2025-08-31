@@ -784,6 +784,35 @@ header nav ul li > a:hover > span {
    text-overflow: ellipsis;
 }
 
+/* Contact section */
+
+#contact {
+   width: 100%;
+   min-height: 800px;
+   background-image: url("../assets/image/contact_background.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   flex-direction: column;
+   box-shadow: inset 0 0 80px 40px rgba(0, 0, 0, 1);
+   padding: 2em;
+}
+
+.contact-main-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   width: 100%;
+}
+
+.wax-seal {
+   height: 300px;
+   z-index: 1;
+   cursor: pointer;
+}
+
 /* Media queries */
 
 @media (width < 1024px) {
