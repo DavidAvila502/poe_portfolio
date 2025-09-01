@@ -376,6 +376,7 @@
                   class="scroll-work-image"
                   src="./assets/image/scrollWork.png"
                   alt="scrollWork.png"
+                  tabindex="0"
                />
             </div>
             <p class="section-title">contacto</p>
@@ -386,6 +387,45 @@
                   src="./assets/image/wax seal.png"
                   alt="wax seal"
                />
+
+               <form class="contact-form" id="contactForm" action="">
+                  <div class="contact-form-field-container">
+                     <label class="contact-form-label" for="name"
+                        >Nombre:</label
+                     >
+                     <input
+                        class="contact-form-input"
+                        type="text"
+                        name="name"
+                        id="name"
+                     />
+                  </div>
+
+                  <div class="contact-form-field-container">
+                     <label class="contact-form-label" for="email"
+                        >Correo:</label
+                     >
+                     <input
+                        class="contact-form-input"
+                        type="email"
+                        name="email"
+                        id="email"
+                     />
+                  </div>
+
+                  <div class="contact-form-field-container">
+                     <label class="contact-form-label" for="message"
+                        >Mensaje:</label
+                     >
+                     <textarea
+                        class="contact-form-input"
+                        name="message"
+                        id="message"
+                     ></textarea>
+                  </div>
+
+                  <button class="contact-form-btn" type="submit">Enviar</button>
+               </form>
             </div>
          </section>
       </main>
@@ -438,5 +478,6 @@
       <script src="./js//effects_btn_toggle.js"></script>
       <script src="./js/appears_text_animation.js"></script>
       <script src="./js/project_modal.js"></script>
+      <script src="./js/wax_seal_and_form_animation.js"></script>
    </body>
 </html>
