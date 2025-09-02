@@ -145,17 +145,20 @@ const projectConstants = {
       ],
 
       technologies: [
-         { name: "React js", image: "./assets/image/react_icon.svg" },
-         { name: "Postgresql", image: "./assets/image/postgre_sql_icon.svg" },
-         { name: "strapi", image: "./assets/image/strapi_icon.svg" },
+         { name: "React js", image: "./src/assets/image/react_icon.svg" },
+         {
+            name: "Postgresql",
+            image: "./src/assets/image/postgre_sql_icon.svg",
+         },
+         { name: "strapi", image: "./src/assets/image/strapi_icon.svg" },
       ],
 
       screenshots: [
-         "./assets/image/villamar_rewards_1.jpeg",
-         "./assets/image/villamar_rewards_2.jpeg",
-         "./assets/image/villamar_rewards_3.jpeg",
-         "./assets/image/villamar_rewards_4.jpeg",
-         "./assets/image/villamar_rewards_5.jpeg",
+         "./src/assets/image/villamar_rewards_1.jpeg",
+         "./src/assets/image/villamar_rewards_2.jpeg",
+         "./src/assets/image/villamar_rewards_3.jpeg",
+         "./src/assets/image/villamar_rewards_4.jpeg",
+         "./src/assets/image/villamar_rewards_5.jpeg",
       ],
 
       github: [],
@@ -170,18 +173,24 @@ const projectConstants = {
       ],
 
       technologies: [
-         { name: "React js", image: "./assets/image/react_icon.svg" },
-         { name: "Postgresql", image: "./assets/image/postgre_sql_icon.svg" },
-         { name: "Spring Boot", image: "./assets/image/spring_boot_icon.svg" },
+         { name: "React js", image: "./src/assets/image/react_icon.svg" },
+         {
+            name: "Postgresql",
+            image: "./src/assets/image/postgre_sql_icon.svg",
+         },
+         {
+            name: "Spring Boot",
+            image: "./src/assets/image/spring_boot_icon.svg",
+         },
       ],
 
       screenshots: [
-         "./assets/image/tropix_1.png",
-         "./assets/image/tropix_2.png",
-         "./assets/image/tropix_3.png",
-         "./assets/image/tropix_4.png",
-         "./assets/image/tropix_5.png",
-         "./assets/image/tropix_6.png",
+         "./src/assets/image/tropix_1.png",
+         "./src/assets/image/tropix_2.png",
+         "./src/assets/image/tropix_3.png",
+         "./src/assets/image/tropix_4.png",
+         "./src/assets/image/tropix_5.png",
+         "./src/assets/image/tropix_6.png",
       ],
 
       github: [
