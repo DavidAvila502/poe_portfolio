@@ -14,16 +14,56 @@ function updateLightPosition(clientX, clientY) {
    cursorLight.style.top = `${y}px`;
 }
 
-body.addEventListener("mousemove", (e) => {
+function mouseMoveHandler(e) {
    lastClientX = e.clientX;
    lastClientY = e.clientY;
    updateLightPosition(lastClientX, lastClientY);
-});
+}
 
-window.addEventListener(
-   "scroll",
-   () => {
-      updateLightPosition(lastClientX, lastClientY);
-   },
-   { passive: true }
-);
+function scrollHandler() {
+   updateLightPosition(lastClientX, lastClientY);
+}
+
+function clientCenter() {
+   return {
+      x: Math.round(window.innerWidth / 2),
+      y: Math.round(window.innerHeight / 2),
+   };
+}
+
+function setCenter() {
+   const { x, y } = clientCenter();
+   lastClientX = x;
+   lastClientY = y;
+   updateLightPosition(lastClientX, lastClientY);
+}
+
+function start() {
+   body.removeEventListener("mousemove", mouseMoveHandler);
+   window.removeEventListener("scroll", scrollHandler);
+
+   body.addEventListener("mousemove", mouseMoveHandler);
+   window.addEventListener("scroll", scrollHandler, { passive: true });
+}
+
+function stop() {
+   body.removeEventListener("mousemove", mouseMoveHandler);
+   window.removeEventListener("scroll", scrollHandler);
+   setCenter();
+}
+
+function startMobile() {
+   body.removeEventListener("mousemove", mouseMoveHandler);
+   window.removeEventListener("scroll", scrollHandler);
+
+   setCenter();
+   window.addEventListener("scroll", scrollHandler, { passive: true });
+}
+
+start();
+
+window.cursorLight = {
+   start,
+   stop,
+   startMobile,
+};

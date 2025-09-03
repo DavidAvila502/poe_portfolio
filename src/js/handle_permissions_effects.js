@@ -53,6 +53,11 @@ function activateEffects() {
    const overlay_2 = document.getElementsByClassName("overlay-2");
    const effects_toggle = document.getElementById("effects-toggle");
 
+   if (window.matchMedia("(max-width: 768px)").matches) {
+      window.cursorLight.stop();
+      window.cursorLight.startMobile();
+   }
+
    rain_sound.muted = false;
    thunder_sound.muted = false;
    cursor_light.style.display = "flex";
