@@ -25,8 +25,10 @@ document.getElementById("btn-deny").addEventListener("click", () => {
 
 const activateBodyScroll = () => {
    document.body.style.overflowY = "auto";
+   document.querySelector("header").style.zIndex = 3;
 };
 
 const deactivateBodyScroll = () => {
    document.body.style.overflowY = "hidden";
+   document.querySelector("header").style.zIndex = 1;
 };
