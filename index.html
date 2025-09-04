@@ -39,7 +39,7 @@
       ></audio>
 
       <header>
-         <nav>
+         <nav id="desktop-navbar">
             <div id="effects-toggle"><span></span></div>
             <ul>
                <li>
@@ -63,6 +63,20 @@
                </li>
             </ul>
          </nav>
+
+         <div id="mobile-navbar-controllers-container">
+            <button id="mobile-navbar-toggle-btn">
+               <img
+                  id="mobile-navbar-toggle-icon"
+                  src="./src/assets/image/menu.svg"
+                  alt="toggle-icon"
+               />
+            </button>
+         </div>
+
+         <div class="mobile-navbar-list-container">
+            <nav></nav>
+         </div>
       </header>
       <main>
          <div id="main-background"></div>
@@ -499,5 +513,6 @@
       <script src="./src/js/appears_text_animation.js"></script>
       <script src="./src/js/project_modal.js"></script>
       <script src="./src/js/wax_seal_and_form_animation.js"></script>
+      <script src="./src/js/mobile_navbar_toggle.js"></script>
    </body>
 </html>
