@@ -15,3 +15,14 @@ document
             "./src/assets/image/menu.svg";
       }
    });
+
+document.querySelectorAll(".mobile-navbar-link").forEach((link) => {
+   link.addEventListener("click", () => {
+      document.body.style.overflowY = "auto";
+      document.getElementById("mobile-navbar-toggle-icon").src =
+         "./src/assets/image/menu.svg";
+      document
+         .querySelector(".mobile-navbar-list-container")
+         .classList.remove("open");
+   });
+});
