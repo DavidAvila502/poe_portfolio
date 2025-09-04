@@ -226,6 +226,7 @@ header nav ul li > a:hover > span {
    border: 0;
    color: white;
    font-size: 20px;
+   cursor: pointer;
 }
 
 #mobile-navbar-toggle-icon {
@@ -242,6 +243,31 @@ header nav ul li > a:hover > span {
    max-height: 0%;
    transition: max-height 350ms ease, opacity 250ms ease;
    opacity: 0;
+}
+
+.mobile-navbar-list-container > nav > ul {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 40px;
+   flex-direction: column;
+}
+
+.mobile-navbar-list-container > nav > ul > li {
+   border-bottom: 1px solid #1f1f1f;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-bottom: 2px;
+}
+.mobile-navbar-list-container > nav > ul > li > a {
+   text-decoration: none;
+   color: white;
+   font-family: "Libre Baskerville", serif;
+   font-style: italic;
+   font-size: 25px;
 }
 
 .mobile-navbar-list-container.open {
