@@ -12,6 +12,7 @@ document.querySelectorAll(".card-project-viewproject-btn").forEach((btn) =>
       const overlay = document.querySelector(".project-modal-overlay");
       overlay.style.opacity = 1;
       overlay.style["pointerEvents"] = "auto";
+      document.querySelector("header").style.zIndex = 1;
    })
 );
 
@@ -23,6 +24,7 @@ document
       const overlay = document.querySelector(".project-modal-overlay");
       overlay.style.opacity = 0;
       overlay.style["pointerEvents"] = "none";
+      document.querySelector("header").style.zIndex = 3;
    });
 
 const setProjectsInfo = (projectName) => {

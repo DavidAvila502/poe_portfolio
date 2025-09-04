@@ -150,7 +150,7 @@ header {
    width: 100%;
    display: flex;
    justify-content: center;
-   z-index: 1;
+   z-index: 3;
    pointer-events: all;
    padding: 0 2em;
 }
