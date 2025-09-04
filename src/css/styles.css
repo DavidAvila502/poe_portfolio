@@ -155,7 +155,9 @@ header {
    padding: 0 2em;
 }
 
-header > nav {
+/* Desktop navbar */
+
+#desktop-navbar {
    max-width: 1280px;
    width: 100%;
    display: flex;
@@ -165,18 +167,18 @@ header > nav {
    gap: 20px;
 }
 
-header nav > ul {
+#desktop-navbar > ul {
    display: flex;
    flex-direction: row;
    gap: 20px;
 }
 
-header > nav > ul > li > a {
+#desktop-navbar > ul > li > a {
    list-style: none;
    text-decoration: none;
 }
 
-header > nav > ul > li > a {
+#desktop-navbar > ul > li > a {
    color: #878787;
    font-family: "Libre Baskerville", serif;
    font-weight: 400;
@@ -187,7 +189,7 @@ header > nav > ul > li > a {
    cursor: pointer;
 }
 
-header > nav > ul > li > a > span {
+#desktop-navbar ul > li > a > span {
    display: block;
    height: 3px;
    background-color: #b8860b;
@@ -196,13 +198,55 @@ header > nav > ul > li > a > span {
    transition: width 0.3s ease;
 }
 
-header > nav > ul > li:hover > a {
+#desktop-navbar > ul > li:hover > a {
    color: white;
 }
 
-header > nav > ul > li:hover > a > span,
+#desktop-navbar > ul > li:hover > a > span,
 header nav ul li > a:hover > span {
    width: 100%;
+}
+
+/* Mobile navbar */
+#mobile-navbar-controllers-container {
+   max-width: 1280px;
+   width: 100%;
+   height: 80px;
+   display: none;
+   align-items: center;
+   justify-content: end;
+   position: relative;
+   /* background-color: #b8860b; */
+}
+
+#mobile-navbar-toggle-btn {
+   width: 40px;
+   height: 40px;
+   background-color: transparent;
+   border: 0;
+   color: white;
+   font-size: 20px;
+}
+
+#mobile-navbar-toggle-icon {
+   height: 35px;
+}
+
+.mobile-navbar-list-container {
+   background-color: black;
+   position: fixed;
+   right: 0px;
+   left: 0px;
+   top: 80px;
+   bottom: 0px;
+   max-height: 0%;
+   transition: max-height 350ms ease, opacity 250ms ease;
+   opacity: 0;
+}
+
+.mobile-navbar-list-container.open {
+   max-height: 100%; /* o 600px — debe ser > contenido */
+   opacity: 1;
 }
 
 /* effects toggle */
@@ -229,7 +273,7 @@ header nav ul li > a:hover > span {
 }
 
 #effects-toggle.active > span {
-   background-color: #b8860b;
+   background-color: #0a0a08;
    transform: translateX(0px);
 }
 
@@ -1009,6 +1053,10 @@ header nav ul li > a:hover > span {
    .thanks-letter-image {
       max-width: 300px;
    }
+
+   #desktop-navbar {
+      display: none;
+   }
 }
 
 @media (width < 500px) {
@@ -1019,5 +1067,24 @@ header nav ul li > a:hover > span {
 
    .permissions-effects-modal-btn-container {
       flex-direction: column;
+   }
+
+   header {
+      background-color: black;
+      position: fixed;
+      height: 80px;
+   }
+
+   .developer-name {
+      z-index: 2;
+   }
+   .developer-info {
+      z-index: 2;
+   }
+   .triangle-outer {
+      z-index: 2;
+   }
+   #mobile-navbar-controllers-container {
+      display: flex;
    }
 }
