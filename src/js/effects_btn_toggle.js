@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-   const effects_toggle = document.getElementById("effects-toggle");
-
-   effects_toggle.addEventListener("click", () => {
-      setEffectsAllowed(!isEffectsAllowed());
-   });
+   document.querySelectorAll(".effects-toggle").forEach((btn) =>
+      btn.addEventListener("click", () => {
+         setEffectsAllowed(!isEffectsAllowed());
+      })
+   );
 });
