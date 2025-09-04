@@ -243,6 +243,7 @@ header nav ul li > a:hover > span {
    max-height: 0%;
    transition: max-height 350ms ease, opacity 250ms ease;
    opacity: 0;
+   pointer-events: none;
 }
 
 .mobile-navbar-list-container > nav > ul {
@@ -271,8 +272,9 @@ header nav ul li > a:hover > span {
 }
 
 .mobile-navbar-list-container.open {
-   max-height: 100%; /* o 600px — debe ser > contenido */
+   max-height: 100%;
    opacity: 1;
+   pointer-events: auto;
 }
 
 /* effects toggle */
