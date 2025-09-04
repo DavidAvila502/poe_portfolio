@@ -1004,10 +1004,20 @@ header nav ul li > a:hover > span {
    .project-modal-story-text {
       font-size: 18px;
    }
-}
 
-@media (width < 768px) {
+   /* thanks */
    .thanks-letter-image {
       max-width: 300px;
+   }
+}
+
+@media (width < 500px) {
+   .permissions-effects-modal-text {
+      font-size: 35px;
+      max-width: 90%;
+   }
+
+   .permissions-effects-modal-btn-container {
+      flex-direction: column;
    }
 }
