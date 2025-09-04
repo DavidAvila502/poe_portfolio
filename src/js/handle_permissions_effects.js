@@ -37,13 +37,13 @@ function deactivateEffects() {
    const thunder_sound = document.getElementById("thunder-sound");
    const cursor_light = document.getElementById("cursor-light");
    const overlay_2 = document.getElementsByClassName("overlay-2");
-   const effects_toggle = document.getElementById("effects-toggle");
+   const effects_toggle = document.querySelectorAll(".effects-toggle");
 
    rain_sound.muted = true;
    thunder_sound.muted = true;
    cursor_light.style.display = "none";
    overlay_2[0].style.display = "none";
-   effects_toggle.classList.remove("active");
+   effects_toggle.forEach((btn) => btn.classList.remove("active"));
 }
 
 function activateEffects() {
@@ -51,7 +51,7 @@ function activateEffects() {
    const thunder_sound = document.getElementById("thunder-sound");
    const cursor_light = document.getElementById("cursor-light");
    const overlay_2 = document.getElementsByClassName("overlay-2");
-   const effects_toggle = document.getElementById("effects-toggle");
+   const effects_toggle = document.querySelectorAll(".effects-toggle");
 
    if (window.matchMedia("(max-width: 768px)").matches) {
       window.cursorLight.stop();
@@ -62,5 +62,5 @@ function activateEffects() {
    thunder_sound.muted = false;
    cursor_light.style.display = "flex";
    overlay_2[0].style.display = "flex";
-   effects_toggle.classList.add("active");
+   effects_toggle.forEach((btn) => btn.classList.add("active"));
 }
