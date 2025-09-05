@@ -1088,6 +1088,7 @@ header nav ul li > a:hover > span {
 }
 
 @media (width < 500px) {
+   /* permissions modal */
    .permissions-effects-modal-text {
       font-size: 35px;
       max-width: 90%;
@@ -1098,7 +1099,6 @@ header nav ul li > a:hover > span {
    }
 
    header {
-      background-color: black;
       position: fixed;
       height: 80px;
       /* box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6); */
@@ -1110,6 +1110,12 @@ header nav ul li > a:hover > span {
       );
    }
 
+   .background-black {
+      background-color: black;
+   }
+
+   /* banner seciton */
+
    .developer-name {
       z-index: 2;
    }
@@ -1119,12 +1125,18 @@ header nav ul li > a:hover > span {
    .triangle-outer {
       z-index: 2;
    }
+
+   /* navbar */
    #mobile-navbar-controllers-container {
       display: flex;
    }
+
+   /* section style */
    .scroll-work-image {
       height: 140px;
    }
+
+   /* cursor light */
 
    #cursor-light {
       width: 120px;
@@ -1138,5 +1150,10 @@ header nav ul li > a:hover > span {
          rgba(0, 0, 0, 0.2) 70%,
          rgba(0, 0, 0, var(--overlay-end-opacity)) 100%
       );
+   }
+
+   /* About */
+   .about-text {
+      font-size: 15px;
    }
 }

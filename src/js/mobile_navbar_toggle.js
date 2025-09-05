@@ -9,10 +9,12 @@ document
          document.body.style.overflowY = "hidden";
          document.getElementById("mobile-navbar-toggle-icon").src =
             "./src/assets/image/x.svg";
+         document.querySelector("header").classList.add("background-black");
       } else {
          document.body.style.overflowY = "auto";
          document.getElementById("mobile-navbar-toggle-icon").src =
             "./src/assets/image/menu.svg";
+         document.querySelector("header").classList.remove("background-black");
       }
    });
 
@@ -24,5 +26,6 @@ document.querySelectorAll(".mobile-navbar-link").forEach((link) => {
       document
          .querySelector(".mobile-navbar-list-container")
          .classList.remove("open");
+      document.querySelector("header").classList.remove("background-black");
    });
 });
