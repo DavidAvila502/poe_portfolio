@@ -1122,8 +1122,7 @@ header nav ul li > a:hover > span {
    #mobile-navbar-controllers-container {
       display: flex;
    }
-}
-
-.scroll-work-image {
-   height: 140px;
+   .scroll-work-image {
+      height: 140px;
+   }
 }
