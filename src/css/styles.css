@@ -1116,3 +1116,7 @@ header nav ul li > a:hover > span {
       display: flex;
    }
 }
+
+.scroll-work-image {
+   height: 140px;
+}
